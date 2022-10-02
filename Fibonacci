@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+	int i, n, term1, term2, temp;
+	term1=0;
+	term2=1;
+	cin>>n;
+	cout<<"\n";
+	
+	for(i=1; i<=n; i++)
+	{
+		if(i==1)
+		{
+			cout<<term1<<" ";
+			continue;
+		}
+		if(i==2)
+		{
+			cout<<term2<<" ";
+			continue;
+		}
+		temp = term1+term2;
+		term1 = term2;
+		term2 = temp;
+		
+		cout<<temp<<" ";
+	}
+	return 0;
+}
